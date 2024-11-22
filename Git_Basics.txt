@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------
+# Creating git repository in GitHub and Connect to local machine 
+--------------------------------------------------------------------------
+Create git repository with readme file and clone it to local machine using
+git clone REMOTE-URL (HTTPS or SSH)
+
+--------------------------------------------------------------------------
+# Creating a directory in local machine and connect to git repository in GitHub 
+--------------------------------------------------------------------------
+Create directory and open terminal in that directory
+
+To initialize the git in that directory type
+git init  
+
+Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub. For more information, see "Creating a new repository."
+
+At the top of your repository on GitHub's Quick Setup page, click  to copy the remote repository URL.
+
+Open Terminal.
+
+Change the current working directory to your local project where you have initialized git.
+
+To add the URL for the remote repository where your local repository will be pushed, run the following command. Replace REMOTE-URL with the repository's full URL on GitHub.
+
+git remote add origin REMOTE-URL (HTTPS or SSH)
+
+To verify that you set the remote URL correctly, run the following command.
+
+git remote -v
+
+To push the changes in your local repository to GitHub, run the following command.
+
+git push origin main
+
+--------------------------------------------------------------------------
+# Setting up git username and password globally
+--------------------------------------------------------------------------
+Open terminal
+
+Configure your Username
+git config --global user.name "type_username"
+
+Configure your email
+git config --global user.email "type_email@gmail.com"
+
+git config --global user.password "type_password"
+
+Now git username, email id and password has been set
+
+To check the inputs, type
+git config --list --show-origin
+
+--------------------------------------------------------------------------
+# Updating repository after updating corresponding local directory
+--------------------------------------------------------------------------
+To update all files in the directory add all files by
+git add .
+
+To see the branches
+git branch 
+
+It will show branches available main or master etc.
+
+To create new branch 
+git branch new_branch_name
+
+Now commit the update and add some comment in order to identify what changes you have made in this commit
+git commit -m "comment"
+
+For pushing to main branch 
+git push origin main 
+
+For other branch you can do the same
+
+
