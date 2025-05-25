@@ -1,0 +1,32 @@
+#call path for environmental variables
+%env PYTHONPATH=
+
+#install package which creates virtual environment
+!pip install virtualenv
+
+#create virtual environment
+!virtualenv LeHaMoc_env
+
+#download and install miniconda
+!wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+!chmod +x Miniconda3-latest-Linux-x86_64.sh
+
+!./Miniconda3-latest-Linux-x86_64.sh -b -f -p /usr/local
+
+#installing specific version of python 
+!conda install -q -y --prefix /usr/local python=3.9 ujson
+
+#set path for environmental variables
+import sys
+sys.path.append('/usr/local/lib/python3.9/site-packages/')
+
+import os
+os.environ['CONDA_PREFIX'] = '/usr/local/envs/LeHaMoc_env'
+
+#check version of python installed 
+!python --version
+
+#installing specific version of packages
+!pip install numpy==1.21.5 astropy==5.0.4 matplotlib==3.5.1 pandas==1.4.2 tqdm==4.64.0 shapely==1.7.1 scipy==1.7.3
+
