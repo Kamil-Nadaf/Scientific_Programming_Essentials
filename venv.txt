@@ -1,0 +1,13 @@
+Vitual Environment with specific version of Python using virtualenv
+here I am installing version==3.9
+
+Install python3.9 in Terminal 
+sudo apt install python3.9 python3.9-venv
+
+Install Virtual Environment Package and Create venv 
+pip install virtualenv
+virtualenv -p python3.9 venv_name
+
+Activate venv
+source path/to/venv_name/bin/activate
+
