@@ -1,9 +1,0 @@
-Connecting server or cluster
-name@id is account created for you in server
-
-Type
-ssh -X -Y name@id
-Type password and Enter
-
-Copying file from remote server to local machine
-scp name@id:path_to_the_file_in_that_server
