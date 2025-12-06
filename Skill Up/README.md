@@ -1,7 +1,7 @@
-# 🌌 Computational Astrophysics & AI Mastery: The 10-Week Accelerated Protocol
+# 🌌 Data Science & AI Mastery: The 12-Week Accelerated Protocol
 
 **Role:** High Energy Astrophysics PhD Candidate / Senior Data Scientist
-**Timeline:** 10 Weeks (Accelerated)
+**Timeline:** 12 Weeks (Accelerated)
 **Focus:** Reproducibility, GPU Computing, Time-Domain Astronomy, Deep Learning.
 
 ---
@@ -9,7 +9,7 @@
 ## 📅 Phase 1: Research Engineering & Infrastructure (Weeks 1–3)
 *Goal: Stop scripting like a student. Start engineering like a professional.*
 
-### **Week 1: The Iron-Clad Environment (Docker & CI/CD)**
+### **Week 1: The secure, robust Docker container environment (Docker & CI/CD)**
 **Theme:** "It runs on my machine" is not a valid excuse.
 * **Industry Skill:** Docker containerization, Git Flow, GitHub Actions (CI/CD).
 * **Astro Application:** Creating a reproducible environment for analyzing FITS files.
@@ -29,9 +29,9 @@
     * **Efficiency:** Generators vs. Lists, Context Managers (`with open(...)`).
 * **🛑 Deliverable:** A Python package structure where running `pytest` verifies your orbital mechanics calculations.
 
-### **Week 3: Data Mining & GPU Acceleration**
+### **Week 3: Data Mining & Data Visualisation**
 **Theme:** Handling Massive Datasets (The "Big Data" of Space).
-* **Industry Skill:** SQL, HDF5, CUDA (via CuPy).
+* **Industry Skill:** SQL, HDF5.
 * **Astro Application:** Querying Gaia DR3 and processing massive data cubes.
 * **Detailed Curriculum:**
     * **SQL/ADQL:** Querying the Gaia archive using Astronomical Data Query Language (ADQL).
@@ -39,6 +39,7 @@
     * **GPU Computing:** replacing `numpy` with `cupy` for 100x speedups in array operations.
 * **🛑 Deliverable:** A notebook that queries 100,000 stars from Gaia, saves to HDF5, and computes proper motions using GPU acceleration.
 
+CUDA (via CuPy)
 ---
 
 ## 🔭 Phase 2: The Physics Core & Statistical Rigor (Weeks 4–6)
