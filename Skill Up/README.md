@@ -77,7 +77,7 @@ CUDA (via CuPy)
 
 ---
 
-## 🧠 Phase 3: Machine Intelligence & Deployment (Weeks 7–10)
+## 🧠 Phase 3: Machine Intelligence (Weeks 7–10)
 *Goal: Predictive Modeling and Deep Learning on the GPU.*
 
 ### **Week 7: Classical Machine Learning (Scikit-Learn)**
@@ -121,6 +121,8 @@ CUDA (via CuPy)
 * **🛑 Final Capstone:** **"The Sentinel"** – A pipeline that ingests a light curve, processes it via GPU, and flags it if it looks like a High Energy Transient.
 
 ---
+
+## 🧠 Phase 4: AI Engineering (Weeks 10–12)
 
 > "Theory without practice is empty. Code without tests is broken."
 > — **The Dark Knight**
