@@ -93,6 +93,7 @@
     * Labels: Adding Titles, X/Y labels, and Legends (Required for Science!).
 5.  **Debugging Techniques** 
 6.  **Optimization**
+7.  **Handling Servers, Clusters, HPC** ssh and remote protocols, sudo methods, basics of cloud computing.
 
 ### 🧩 Week 2 Assignment: "The Data Processor"
 **Task:** Write a clean Python script using Functions (No spaghetti code).
@@ -126,10 +127,10 @@
 * **Detailed Curriculum:**
     * **SQL/ADQL:** Querying the Gaia archive using Astronomical Data Query Language (ADQL).
     * **Data Formats:** Moving beyond CSV. Efficient storage with HDF5 and Parquet.
-    * **GPU Computing:** replacing `numpy` with `cupy` for 100x speedups in array operations.
-* **🛑 Deliverable:** A notebook that queries 100,000 stars from Gaia, saves to HDF5, and computes proper motions using GPU acceleration.
 
-CUDA (via CuPy)
+* **Hardware-based computing** optimization based on hardware, cotinuation of optimization from week 1.    
+* **GPU Computing:** replacing `numpy` with `cupy` for 100x speedups in array operations. Use of CUDA, DGS Spark and new technologies.
+* **🛑 Deliverable:** A notebook that queries 100,000 stars from Gaia, saves to HDF5, and computes proper motions using GPU acceleration.
 ---
 
 ## 🔭 Phase 2: The Physics Core & Statistical Rigor (Weeks 4–6)
