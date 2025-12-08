@@ -29,6 +29,96 @@
     * **Efficiency:** Generators vs. Lists, Context Managers (`with open(...)`).
 * **🛑 Deliverable:** A Python package structure where running `pytest` verifies your orbital mechanics calculations.
 
+---
+## Updated Week 1 and Week 2
+# 🚀 Computational Astrophysics & Data Science: Phase 1 (Weeks 1-2)
+
+**Current Status:** Building the Foundation.
+**Goal:** From "Scripting Struggle" to "Reproducible Science."
+
+---
+
+## 🛠️ Week 1: The Iron-Clad Environment (Infrastructure)
+*Focus: Tooling, Reproducibility, and Git Mastery.*
+
+### **Core Modules**
+1.  **The Terminal (Shell)**
+    * Basic commands: `ls`, `cd`, `mkdir`, `touch`, `rm`.
+    * *Why:* You cannot use Docker or Git effectively without the terminal.
+2.  **Environment Management**
+    * **Conda:** Creating/Activating environments (`conda create`, `conda activate`).
+    * **Docker:** Writing a simple `Dockerfile` to "freeze" your OS and Python version.
+    * *Gap Fill:* Learn why "Dependency Hell" happens and how `requirements.txt` fixes it.
+3.  **Git & GitHub (Version Control)**
+    * The Workflow: `git init` -> `git add` -> `git commit` -> `git push`.
+    * **Repo Anatomy:** Learning to read other people's structures (`src/`, `docs/`, `tests/`).
+4.  **AI as a Mentor**
+    * *Skill:* Using AI to explain unknown code.
+    * *Prompt Strategy:* "Explain this code block to me like I am 12. What does line 4 do specifically?"
+
+### 🧩 Week 1 Assignment: "The Portable Lab"
+**Task:** Create a GitHub Repository that runs on any machine.
+1.  **Repo Structure:**
+    ```text
+    my-first-repo/
+    ├── README.md          # Instructions
+    ├── environment.yml    # Conda deps
+    ├── Dockerfile         # Docker instructions
+    └── src/
+        └── main.py        # Simple "Hello World"
+    ```
+2.  **Challenge:**
+    * **Astro:** Script imports `astropy` and prints the speed of light constant.
+    * **Corp:** Script imports `pandas` and prints the version number.
+3.  **Success Metric:** You can delete the folder, clone it from GitHub, and run it with one command.
+
+---
+
+## 🐍 Week 2: Logic, Libraries & Vectorization
+*Focus: Python Logic, Debugging, and The Scientific Stack.*
+
+### **Core Modules**
+1.  **Algorithmic Logic (Fixing the Loop Struggle)**
+    * **Flowcharting:** Draw the logic on paper *before* coding.
+    * **Control Flow:** Mastering `if`, `else`, `for` loops.
+    * *Debug Skill:* Using `print()` and Breakpoints to see variables change in real-time.
+2.  **Modular Programming**
+    * **Functions:** `def calculate_gravity(m1, m2, r):`. Inputs -> Processing -> Returns.
+    * **OOP Intro:** Understanding `Class Star` vs. `Class Galaxy` (Attributes and Methods).
+3.  **The Power Libraries (NumPy & Pandas)**
+    * **NumPy:** The specific skill of **Vectorization** (replacing slow loops with fast array math).
+    * **Pandas:** Basics like Loading `.csv` data, viewing `.head()`, and filtering rows.
+4.  **Visualization (Matplotlib)**
+    * Basic plotting: `plt.plot()`, `plt.scatter()`.
+    * Labels: Adding Titles, X/Y labels, and Legends (Required for Science!).
+5.  **Debugging Techniques** 
+6.  **Optimization**
+
+### 🧩 Week 2 Assignment: "The Data Processor"
+**Task:** Write a clean Python script using Functions (No spaghetti code).
+
+**Option A: Astro (Hertzsprung-Russell Lite)**
+* **Data:** Generate random arrays for 'Temperature' and 'Luminosity'.
+* **Logic:**
+    1.  Function `classify_star(temp)`: Returns "Red Dwarf" or "Blue Giant" based on temperature.
+    2.  **Vectorization:** Calculate the radius of all stars at once using $L = 4\pi R^2 \sigma T^4$.
+    3.  **Output:** A Scatter plot of Temp vs. Luminosity (Color-coded).
+
+**Option B: Corp (Sales Anomaly Detection)**
+* **Data:** A CSV with 'Date', 'Product', 'Sales_Amount'.
+* **Logic:**
+    1.  Function `clean_data(df)`: Removes rows with missing values.
+    2.  **Vectorization:** Create a new column 'Tax' that is 15% of 'Sales_Amount'.
+    3.  **Output:** A Bar chart showing Total Sales per Product.
+
+---
+
+### 🧠 AI Toolkit for Weeks 1-2
+* **ChatGPT/Claude:** "I am getting this error: [Paste Error]. Explain what it means and how to fix it."
+* **Phind.com:** "How do I install Astropy using Conda?" (Optimized for technical searching).
+* **GitHub Copilot (Optional):** Use it to explain syntax, but *type the code yourself* to build muscle memory.
+---
+
 ### **Week 3: Data Mining & Data Visualisation**
 **Theme:** Handling Massive Datasets (The "Big Data" of Space).
 * **Industry Skill:** SQL, HDF5.
