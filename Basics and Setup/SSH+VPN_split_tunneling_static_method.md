@@ -153,3 +153,83 @@ To completely disable and delete the automatic script:
 sudo launchctl unload /Library/LaunchDaemons/com.vpnspark.labroute.plist
 sudo rm /Library/LaunchDaemons/com.vpnspark.labroute.plist
 ```
+
+---
+## If you want to add multiple server IPs to bypass the VPN :
+
+### <span style="color:darkorange;">1) Unload the old service</span>
+
+sudo launchctl unload /Library/LaunchDaemons/com.vpnspark.labroute.plist 2\>/dev/null
+
+### Delete the old file
+
+sudo rm /Library/LaunchDaemons/com.vpnspark.labroute.plist 2\>/dev/null
+
+
+
+### <span style="color:darkorange;">2) Create the New "labserver" Service</span>
+
+Now we create the new file. I have updated the filename to `com.labserver.route.plist` and the internal Label to `com.labserver.route`.
+
+**⚠️ Important:**
+
+* DGS Spark IP : 114.212.163.217
+* Datalore IP : 114.212.184.230
+* Replace `1.2.3.4` with your 3rd server IP (or remove that line if you don't have one yet).
+
+```
+sudo tee /Library/LaunchDaemons/com.labserver.route.plist <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "[http://www.apple.com/DTDs/PropertyList-1.0.dtd](http://www.apple.com/DTDs/PropertyList-1.0.dtd)">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.labserver.route</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>
+        sleep 60;
+        /sbin/route -n add -host 114.212.163.217 192.168.2.1;
+        /sbin/route -n add -host 114.212.184.230 192.168.2.1;
+        /sbin/route -n add -host 1.2.3.4 192.168.2.1;
+        </string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>
+EOF
+```
+
+
+
+### <span style="color:darkorange;">3) Set permissions and load</span>
+
+```
+sudo chown root:wheel /Library/LaunchDaemons/com.labserver.route.plist
+sudo chmod 644 /Library/LaunchDaemons/com.labserver.route.plist
+sudo launchctl load /Library/LaunchDaemons/com.labserver.route.plist
+```
+
+### <span style="color:darkorange;">4) Verification</span>
+
+After restarting your Mac and waiting 60 seconds:
+
+```
+netstat -nr | grep 114.212
+```
+
+*(Should show routing entries for your Lab IPs).*
+
+### <span style="color:darkorange;">5) Uninstall</span>
+
+To completely remove the service:
+
+```
+sudo launchctl unload /Library/LaunchDaemons/com.labserver.route.plist
+sudo rm /Library/LaunchDaemons/com.labserver.route.plist
+```
