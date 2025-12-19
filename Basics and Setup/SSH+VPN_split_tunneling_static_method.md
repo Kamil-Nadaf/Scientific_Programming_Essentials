@@ -157,14 +157,14 @@ sudo rm /Library/LaunchDaemons/com.vpnspark.labroute.plist
 ---
 ## If you want to add multiple server IPs to bypass the VPN :
 
+
 ### <span style="color:darkorange;">1) Unload the old service</span>
 
-sudo launchctl unload /Library/LaunchDaemons/com.vpnspark.labroute.plist 2\>/dev/null
-
-### Delete the old file
-
-sudo rm /Library/LaunchDaemons/com.vpnspark.labroute.plist 2\>/dev/null
-
+```
+sudo launchctl unload /Library/LaunchDaemons/com.vpnspark.labroute.plist 2>/dev/null
+sudo rm /Library/LaunchDaemons/com.vpnspark.labroute.plist 2>/dev/null
+sudo launchctl unload /Library/LaunchDaemons/com.labserver.route.plist 2>/dev/null
+```
 
 
 ### <span style="color:darkorange;">2) Create the New "labserver" Service</span>
