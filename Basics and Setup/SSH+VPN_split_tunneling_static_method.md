@@ -32,7 +32,7 @@ route -n get default | grep gateway
    * *Example:* `192.168.1.1` or `10.0.0.1`.
    * **Write this number down.**
 
-\---
+---
 
 ## <span style="color:darkgreen;">Type 1: The Manual Alias Method</span>
 
@@ -68,7 +68,7 @@ To remove the alias:
 3. Press `Ctrl+O` (Enter) to save, and `Ctrl+X` to exit.
 4. Reload shell: `source ~/.zshrc`
 
-\---
+---
 
 ## <span style="color:darkgreen;">Type 2: The Automatic Startup Method</span>
 
@@ -155,6 +155,7 @@ sudo rm /Library/LaunchDaemons/com.vpnspark.labroute.plist
 ```
 
 ---
+
 ## If you want to add multiple server IPs to bypass the VPN :
 
 
